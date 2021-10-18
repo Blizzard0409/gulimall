@@ -1,0 +1,26 @@
+server:
+  port: 11000
+
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://59.110.106.16:3344/gulimall_wms?userUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.jdbc.Driver
+  application:
+    name: gulimall-ware
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto   # 主键自增
+logging:
+  level:
+    com.xmh: debug
